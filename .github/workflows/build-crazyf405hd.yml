@@ -12,8 +12,8 @@ jobs:
           sudo apt-get install -y gcc-arm-none-eabi
       - name: Build target
         run: make TARGET=CRAZYF405HD
-      - name: Upload firmware
+      - name: Upload firmware as artifact
         uses: actions/upload-artifact@v3
         with:
-          name: firmware
+          name: CRAZYF405HD_hex
           path: obj/CRAZYF405HD/*.hex
